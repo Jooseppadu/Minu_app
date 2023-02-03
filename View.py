@@ -8,7 +8,7 @@ from tkinter import scrolledtext
 # Creating tkinter main window
 win = tk.Tk()
 win.title("Programm")
-win.geometry('600x700')
+win.geometry('600x500')
 
 
 # Title Label
@@ -23,12 +23,35 @@ ttk.Label(win,
 # area widget
 text_area = scrolledtext.ScrolledText(win,
 									wrap = tk.WORD,
-									width = 60,
-									height = 30,
+									width = 20,
+									height = 20,
 									font = ("Times New Roman",
 											11))
 
-text_area.grid(column = 0, pady = 30, padx = 40)
+text_area.grid(row=0, column=0, pady=40, padx=2)
+
+
+
+text_area = scrolledtext.ScrolledText(win,
+									wrap = tk.WORD,
+									width = 20,
+									height = 20,
+									font = ("Times New Roman",
+											11))
+
+text_area.grid(row=0, column=1, pady=40, padx=2)
+
+text_area = scrolledtext.ScrolledText(win,
+									wrap = tk.WORD,
+									width = 20,
+									height = 20,
+									font = ("Times New Roman",
+											11))
+
+text_area.grid(row=0, column=2, pady=40, padx=2)
+
+
+
 
 # Placing cursor in the text area
 text_area.focus()
