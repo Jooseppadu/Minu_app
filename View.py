@@ -1,10 +1,12 @@
 from logging import root
 from tkinter import *
-from tkinter import scrolledtext
+from tkinter import scrolledtext, messagebox
+
 
 class View(Tk):
     def __init__(self, model, controller):
         super().__init__()  # Super on selleks,et kasutada tkinterit
+        self.root = None
         self.model = model
         self.controller = controller
         self.title("Ülesanded")
@@ -68,3 +70,6 @@ class View(Tk):
         text_area_results.grid(row=0, column=3, pady=10, padx=10)
 
         return text_area_students, text_area_tasks,  text_area_results
+
+    def show_warning(self):
+        messagebox.showwarning("Warning", "Please select both students and tasks files")

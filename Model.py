@@ -24,6 +24,12 @@ class Model:
                 self.tasks.append(line)
             print(self.tasks)
 
+    def check_file_selected(self):
+        if self.students_file == '' or self.tasks_file == '':
+            return False
+        else:
+            return True
+
     def shuffle_list(self):
         random.shuffle(self.tasks)
 
